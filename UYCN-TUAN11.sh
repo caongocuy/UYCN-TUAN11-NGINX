@@ -59,8 +59,8 @@ tput setaf 1
 echo "      Phien Ban : $C     "
 tput setaf 7
 # Kiểm tra xem nginx đã được cài đặt hay chưa
-#T=`yum list | grep nginx | awk 'FNR ==1 {print $1}' | sed 's/.x86_64//'`
-T=`rpm -qa | grep nginx | awk 'FNR ==1{print $1}' | sed 's/-1.0.15-11.el6.x86_64//'`
+T=`yum list | grep nginx | awk 'FNR ==1 {print $1}' | sed 's/.x86_64//'`
+#T=`rpm -qa | grep nginx | awk 'FNR ==1{print $1}' | sed 's/-1.0.15-11.el6.x86_64//'`
 sleep 2
 if [ "$T" = "nginx" ] ; then
 # nếu cài rồi thì hiển thị IP và port cho người dùng truy cập
