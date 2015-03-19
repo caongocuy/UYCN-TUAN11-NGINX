@@ -19,7 +19,7 @@ tput setaf 1
 echo "_____ MAY BAN DA CAI NGINX PHIEN BAN `dpkg -l | grep nginx | awk 'FNR ==1 {print $3}'` _____"
 echo "_____ BAN CO THE TRUY CAP THEO DIA CHI: `ifconfig | grep -w inet | grep Bcast | awk -F ':' '{print $2}' | awk '{print $1}'` VA PORT: `cat /etc/nginx/sites-available/default | grep listen |  awk 'FNR == 1 {print $2}'` _____"
 tput setaf 7
-
+tput setaf 7
 # Nếu chưa thì bắt đầu cài đặt
 else
 tput setaf 1
@@ -48,12 +48,12 @@ sleep 2
 tput setaf 1
 echo "_____ BAN DA CO THE SU DUNG DICH VU VOI IP: `ifconfig | grep -w inet | grep Bcast | awk -F ':' '{print $2}' | awk '{print $1}'` VA PORT: `cat /etc/nginx/sites-available/default | grep listen | awk 'FNR == 1 {print}' | awk '{print $2}'` _____"
 tput setaf 7
-fi
-
-# Nếu Distro là CentOs thì hiển thị phiên bản
-tput setaf 1
-elif [ "$HDH" = "CentOS" ] ; then
 tput setaf 7
+fi
+# Nếu Distro là CentOs thì hiển thị phiên bản
+#tput setaf 1
+elif [ "$HDH" = "CentOS" ] ; then
+#tput setaf 7
 C=`head -1 /etc/issue.net | awk '{print $1, $3}'`
 tput setaf 1
 echo "      Phien Ban : $C     "
