@@ -65,8 +65,8 @@ sleep 2
 if [ "$T" = "nginx" ] ; then
 # nếu cài rồi thì hiển thị IP và port cho người dùng truy cập
 tput setaf 3
-echo "_____ MAY BAN DA CAI NGINX PHIEN BAN `yum list | grep nginx | awk 'FNR ==1 {print $2}'` _____"
-echo "_____ BAN DA CO THE TRUY CAP THEO DIA CHI `ifconfig | grep -w inet | grep Bcast | awk -F ':' '{print $2}' | awk '{print $1}'` VA PORT `cat /etc/nginx/conf.d/default.conf | grep listen |  awk 'FNR == 1 {print $2}'` _____"
+echo "_____ BAN DA CAI NGINX PHIEN BAN `yum list | grep nginx | awk 'FNR ==1 {print $2}'` _____"
+echo "_____ CO THE TRUY CAP THEO DIA CHI `ifconfig | grep -w inet | grep Bcast | awk -F ':' '{print $2}' | awk '{print $1}'` VA PORT `cat /etc/nginx/conf.d/default.conf | grep listen |  awk 'FNR == 1 {print $2}'` _____"
 tput setaf 7
 # Nếu chưa thì bắt đầu cài đặt
 else
